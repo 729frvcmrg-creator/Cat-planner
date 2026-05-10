@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Planner‑Cat 2026</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Planner‑Cat 2026</h1>
+    <div class="cat">
+        <img src="cat-sad.png" alt="Кот" id="catImg">
+        <p id="catState">Грустный кот</p>
+    </div>
+    <button id="showHelp" class="help-btn">❓ Инструкция</button>
+</header>
+
+<main>
+    <section class="calendar">
+        <h2>Календарь 2026</h2>
+
+        <div class="month-selector">
+            <button id="prevMonth">←</button>
+            <span id="monthLabel"></span>
+            <button id="nextMonth">→</button>
+        </div>
+
+        <table id="calendarTable">
+            <thead>
+                <tr><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th>
+                    <th>Пт</th><th>Сб</th><th>Вс</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <section class="task-panel">
+        <h2>Задачи на выбранный день</h2>
+
+        <div class="add-task">
+            <input type="text" id="newTaskInput" placeholder="Новая задача">
+            <button id="addTaskBtn">+</button>
+        </div>
+
+        <ul id="taskList"></ul>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Planner‑Cat. Все права защищены.</p>
+</footer>
+
+<!-- Модальное окно с инструкцией -->
+<div id="helpModal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close" id="closeHelp">&times;</span>
+        <h2>Как пользоваться Planner‑Cat</h2>
+        <ol>
+            <li>Выберите любой день в календаре.</li>
+            <li>Нажмите <strong>+</strong>, введите задачу и подтвердите.</li>
+            <li>Отметьте галочкой выполненные задачи.</li>
+            <li>Когда все задачи за день выполнены – кот становится <strong>счастливым</strong>.</li>
+            <li>Если остались невыполненными – кот будет <strong>грустным</strong>, а незавершённые задачи автоматически перенесутся на следующий день (полночь).</li>
+        </ol>
+        <p>Только ваш браузер хранит данные, они не уходят никуда.</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+/* ---------- базовые стили ---------- */
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:system-ui, sans-serif; background:#f4f4f9; color:#333; }
+
+header {
+    background:#0d47a1; color:#fff; padding:1rem;
+    text-align:center; position:relative;
+}
+header h1 { margin-bottom:.5rem; }
+.cat { display:flex; flex-direction:column; align-items:center; }
+.cat img { width:80px; height:80px; }
+.help-btn {
+    position:absolute; top:1rem; right:1rem;
+    background:#ffca28; border:none; padding:.4rem .8rem;
+    border-radius:4px; cursor:pointer; font-weight:bold;
+}
+
+/* ---------- модальное окно ---------- */
+.modal { position:fixed; inset:0; background:rgba(0,0,0,.5);
+         display:flex; align-items:center; justify-content:center; }
+.modal.hidden { display:none; }
+.modal-content {
+    background:#fff; padding:1.5rem; border-radius:8px;
+    max-width:500px; width:90%; position:relative;
+}
+.modal-content .close {
+    position:absolute; top:.5rem; right:.8rem; cursor:pointer;
+    font-size:1.5rem; line-height:1;
+}
+
+/* ---------- основной контент ---------- */
+main { display:flex; flex-wrap:wrap; gap:1rem;
+        max-width:1200px; margin:2rem auto; padding:0 1rem; }
+section { background:#fff; padding:1rem; border-radius:8px;
+          box-shadow:0 2px 6px rgba(0,0,0,.1); flex:1 1 300px; }
+
+h2 { margin-bottom:.8rem; text-align:center; }
+
+/* календарь */
+.month-selector { display:flex; justify-content:center; gap:.5rem;
+                  margin-bottom:.8rem; }
+.month-selector button {
+    background:#1976d2; color:#fff; border:none; padding:.3rem .6rem;
+    cursor:pointer; border-radius:4px;
+}
+.month-selector span { font-weight:bold; line-height:2; }
+
+table { width:100%; border-collapse:collapse; }
+th, td { width:14.28%; padding:.4rem; text-align:center; }
+td { cursor:pointer; border-radius:4px; }
+td.empty { background:transparent; cursor:default; }
+td.today { background:#ffca28; }
+td.selected { background:#90caf9; }
+td.has-tasks { background:#c8e6c9; }
+
+/* задачи */
+.task-panel .add-task { display:flex; gap:.5rem; margin-bottom:1rem; }
+#newTaskInput { flex:1; padding:.4rem; border:1px solid #bbb; border-radius:4px; }
+#addTaskBtn { padding:.4rem .8rem; background:#4caf50; color:#fff;
+              border:none; border-radius:4px; cursor:pointer; }
+
+ul { list-style:none; }
+li { display:flex; align-items:center; gap:.5rem; padding:.3rem 0; }
+li input[type="checkbox"] { width:1rem; height:1rem; }
+li.completed label { text-decoration:line-through; color:#777; }
+
+footer { text-align:center; padding:1rem; background:#e0e0e0; margin-top:2rem; }
